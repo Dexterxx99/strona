@@ -8,7 +8,7 @@ document.getElementById('video-options').addEventListener('change', function() {
     seasonContainer.style.display = 'none';
     episodeContainer.style.display = 'none';
 
-    if (selectedValue === 'serial1') {
+    if (selectedValue === 'lego-nexo-knights') {
         const seasonSelect = document.getElementById('season-options');
         seasonSelect.innerHTML = ''; // Czyści poprzednie sezony
 
@@ -43,17 +43,11 @@ function populateEpisodes(series, season) {
     videoLinks.innerHTML = ''; // Czyści poprzednie linki
 
     const episodes = {
-        'serial1': {
-            'season1': ['Odcinek 1', 'Odcinek 2', 'Odcinek 3'],
-            'season2': ['Odcinek 1', 'Odcinek 2'],
-            'season3': ['Odcinek 1', 'Odcinek 2', 'Odcinek 3', 'Odcinek 4'],
-            'season4': ['Odcinek 1', 'Odcinek 2']
-        },
-        'serial2': {
-            'season1': ['Odcinek 1', 'Odcinek 2']
-        },
-        'film': {
-            '': ['Wersja reżyserska', 'Wersja kinowa']
+        'lego-nexo-knights': {
+            'season1': Array.from({ length: 10 }, (_, i) => `Odcinek ${i + 1}`),
+            'season2': Array.from({ length: 10 }, (_, i) => `Odcinek ${i + 1}`),
+            'season3': Array.from({ length: 10 }, (_, i) => `Odcinek ${i + 1}`),
+            'season4': Array.from({ length: 10 }, (_, i) => `Odcinek ${i + 1}`)
         }
     };
 
@@ -82,7 +76,7 @@ function populateEpisodes(series, season) {
         videoLinks.innerHTML = ''; // Czyści poprzednie linki
 
         const link = document.createElement('a');
-        link.href = getVideoUrl(series, selectedEpisode);
+        link.href = getVideoUrl(series, season, selectedEpisode);
         link.textContent = this.options[this.selectedIndex].text;
         link.target = '_blank'; // Otwiera link w nowej karcie
         videoLinks.appendChild(link);
@@ -97,24 +91,60 @@ function populateEpisodes(series, season) {
     }
 }
 
-function getVideoUrl(series, episode) {
+function getVideoUrl(series, season, episode) {
     // Zwraca odpowiedni URL na podstawie wyboru
     const urls = {
-        'serial1': {
-            'odcinek-1': 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',  // Zamień na odpowiednie VIDEO_ID
-            'odcinek-2': 'https://www.youtube.com/watch?v=kJQP7kiw5Fk',
-            'odcinek-3': 'https://www.youtube.com/watch?v=3JZ_D3ELwOQ',
-            'odcinek-4': 'https://www.youtube.com/watch?v=8ZcmTl_1ER8'
-        },
-        'serial2': {
-            'odcinek-1': 'https://www.youtube.com/watch?v=VGCEWAZV3zY',
-            'odcinek-2': 'https://www.youtube.com/watch?v=tVj0ZTS4WF4'
-        },
-        'film': {
-            'wersja-rezyserska': 'https://www.youtube.com/watch?v=VGCEWAZV3zY',
-            'wersja-kinowa': 'https://www.youtube.com/watch?v=tVj0ZTS4WF4'
+        'lego-nexo-knights': {
+            'season1': {
+                'odcinek-1': 'https://www.youtube.com/watch?v=example1',  // Zamień na odpowiednie VIDEO_ID
+                'odcinek-2': 'https://www.youtube.com/watch?v=example2',
+                'odcinek-3': 'https://www.youtube.com/watch?v=example3',
+                'odcinek-4': 'https://www.youtube.com/watch?v=example4',
+                'odcinek-5': 'https://www.youtube.com/watch?v=example5',
+                'odcinek-6': 'https://www.youtube.com/watch?v=example6',
+                'odcinek-7': 'https://www.youtube.com/watch?v=example7',
+                'odcinek-8': 'https://www.youtube.com/watch?v=example8',
+                'odcinek-9': 'https://www.youtube.com/watch?v=example9',
+                'odcinek-10': 'https://www.youtube.com/watch?v=example10'
+            },
+            'season2': {
+                'odcinek-1': 'https://www.youtube.com/watch?v=example11',
+                'odcinek-2': 'https://www.youtube.com/watch?v=example12',
+                'odcinek-3': 'https://www.youtube.com/watch?v=example13',
+                'odcinek-4': 'https://www.youtube.com/watch?v=example14',
+                'odcinek-5': 'https://www.youtube.com/watch?v=example15',
+                'odcinek-6': 'https://www.youtube.com/watch?v=example16',
+                'odcinek-7': 'https://www.youtube.com/watch?v=example17',
+                'odcinek-8': 'https://www.youtube.com/watch?v=example18',
+                'odcinek-9': 'https://www.youtube.com/watch?v=example19',
+                'odcinek-10': 'https://www.youtube.com/watch?v=example20'
+            },
+            'season3': {
+                'odcinek-1': 'https://www.youtube.com/watch?v=example21',
+                'odcinek-2': 'https://www.youtube.com/watch?v=example22',
+                'odcinek-3': 'https://www.youtube.com/watch?v=example23',
+                'odcinek-4': 'https://www.youtube.com/watch?v=example24',
+                'odcinek-5': 'https://www.youtube.com/watch?v=example25',
+                'odcinek-6': 'https://www.youtube.com/watch?v=example26',
+                'odcinek-7': 'https://www.youtube.com/watch?v=example27',
+                'odcinek-8': 'https://www.youtube.com/watch?v=example28',
+                'odcinek-9': 'https://www.youtube.com/watch?v=example29',
+                'odcinek-10': 'https://www.youtube.com/watch?v=example30'
+            },
+            'season4': {
+                'odcinek-1': 'https://www.youtube.com/watch?v=example31',
+                'odcinek-2': 'https://www.youtube.com/watch?v=example32',
+                'odcinek-3': 'https://www.youtube.com/watch?v=example33',
+                'odcinek-4': 'https://www.youtube.com/watch?v=example34',
+                'odcinek-5': 'https://www.youtube.com/watch?v=example35',
+                'odcinek-6': 'https://www.youtube.com/watch?v=example36',
+                'odcinek-7': 'https://www.youtube.com/watch?v=example37',
+                'odcinek-8': 'https://www.youtube.com/watch?v=example38',
+                'odcinek-9': 'https://www.youtube.com/watch?v=example39',
+                'odcinek-10': 'https://www.youtube.com/watch?v=example40'
+            }
         }
     };
 
-    return urls[series] ? urls[series][episode] || '' : '';
+    return urls[series] && urls[series][season] ? urls[series][season][episode] || '' : '';
 }
