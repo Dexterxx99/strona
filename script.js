@@ -115,7 +115,7 @@ function getEpisodesCount(season) {
         'season8-jezdzcy-smokow': 13,
     };
 
-    return episodesCount[season] || 20;
+    return episodesCount[season] || 10;
 }
 
 function updateVideoLinks(season, episode) {
