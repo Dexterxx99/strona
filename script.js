@@ -8,7 +8,6 @@ document.getElementById('video-options').addEventListener('change', function() {
     episodeContainer.style.display = 'none';
     videoLinks.innerHTML = ''; // Czyści poprzednie linki
 
-    // Ustawienia dla Lego Nexo Knights, Slugterra, Generator Rex
     let seasons = {};
     if (selectedValue === 'lego-nexo-knights') {
         seasons = {
@@ -29,6 +28,17 @@ document.getElementById('video-options').addEventListener('change', function() {
             'season1': 'Sezon 1',
             'season2': 'Sezon 2',
             'season3': 'Sezon 3'
+        };
+    } else if (selectedValue === 'jezdzcy-smokow') {
+        seasons = {
+            'season1': 'Sezon 1',
+            'season2': 'Sezon 2',
+            'season3': 'Sezon 3',
+            'season4': 'Sezon 4',
+            'season5': 'Sezon 5',
+            'season6': 'Sezon 6',
+            'season7': 'Sezon 7',
+            'season8': 'Sezon 8'
         };
     }
 
@@ -95,6 +105,14 @@ function getEpisodesCount(season) {
         'season1-generator-rex': 20,
         'season2-generator-rex': 20,
         'season3-generator-rex': 20,
+        'season1-jezdzcy-smokow': 20,
+        'season2-jezdzcy-smokow': 20,
+        'season3-jezdzcy-smokow': 13,
+        'season4-jezdzcy-smokow': 13,
+        'season5-jezdzcy-smokow': 13,
+        'season6-jezdzcy-smokow': 13,
+        'season7-jezdzcy-smokow': 13,
+        'season8-jezdzcy-smokow': 13,
     };
 
     return episodesCount[season] || 10;
@@ -297,6 +315,40 @@ function getVideoUrl(series, season, episode) {
                 'odcinek-18': 'https://www.youtube.com/watch?v=example150',
                 'odcinek-19': 'https://www.youtube.com/watch?v=example151',
                 'odcinek-20': 'https://www.youtube.com/watch?v=example152'
+            }
+        },
+        'jezdzcy-smokow': {
+            'season1': {
+                'odcinek-1': 'https://drive.google.com/file/d/1g2FJbD58QCWZQXys9IXaz-4DN1jbPPc2/view?usp=drive_link',
+                // Dodaj resztę odcinków
+            },
+            'season2': {
+                'odcinek-1': 'https://drive.google.com/drive/folders/example13',
+                // Dodaj resztę odcinków
+            },
+            'season3': {
+                'odcinek-1': 'https://drive.google.com/drive/folders/example14',
+                // Dodaj resztę odcinków
+            },
+            'season4': {
+                'odcinek-1': 'https://drive.google.com/drive/folders/example15',
+                // Dodaj resztę odcinków
+            },
+            'season5': {
+                'odcinek-1': 'https://drive.google.com/drive/folders/example16',
+                // Dodaj resztę odcinków
+            },
+            'season6': {
+                'odcinek-1': 'https://drive.google.com/drive/folders/example17',
+                // Dodaj resztę odcinków
+            },
+            'season7': {
+                'odcinek-1': 'https://drive.google.com/drive/folders/example18',
+                // Dodaj resztę odcinków
+            },
+            'season8': {
+                'odcinek-1': 'https://drive.google.com/drive/folders/example19',
+                // Dodaj resztę odcinków
             }
         }
     };
