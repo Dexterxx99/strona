@@ -45,7 +45,7 @@ function populateEpisodes(series, season) {
     const episodes = {
         'serial1': {
             'season1': ['Odcinek 1', 'Odcinek 2', 'Odcinek 3'],
-            'season2': ['Odcinek 1', 'Odcinek 2'],
+            'season2': ['Odcinek 1', 'Odcinek 2','Odcinek 3','Odcinek 4','Odcinek 5','Odcinek 6','Odcinek 7','Odcinek 8','Odcinek 9','Odcinek 10'],
             'season3': ['Odcinek 1', 'Odcinek 2', 'Odcinek 3', 'Odcinek 4'],
             'season4': ['Odcinek 1', 'Odcinek 2']
         },
@@ -107,8 +107,16 @@ function getVideoUrl(series, episode) {
             'odcinek-4': 'https://www.youtube.com/watch?v=8ZcmTl_1ER8'
         },
         'serial2': {
-            'odcinek-1': 'https://www.youtube.com/watch?v=VGCEWAZV3zY',
-            'odcinek-2': 'https://www.youtube.com/watch?v=tVj0ZTS4WF4'
+            'odcinek-1': 'https://youtu.be/7K3urTkOsQ0',
+            'odcinek-2': 'https://youtu.be/2HG7Q1gnKnE',
+            'odcinek-3': 'https://youtu.be/dJxcEtol7ZY',
+            'odcinek-4': 'https://youtu.be/9sMDxGKJ4dE',
+            'odcinek-5': 'https://youtu.be/MgsSPvPub0c',
+            'odcinek-6': 'https://youtu.be/PHpMVhDkKFU',
+            'odcinek-7': 'https://www.youtube.com',
+            'odcinek-8': 'https://www.youtube.com',
+            'odcinek-9': 'https://www.youtube.com',
+            'odcinek-10': 'https://www.youtube.com'
         },
         'film': {
             'wersja-rezyserska': 'https://www.youtube.com/watch?v=VGCEWAZV3zY',
