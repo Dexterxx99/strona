@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moja Strona</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Witaj na mojej stronie</h1>
+    </header>
+
+    <section class="select-container">
+        <label for="video-options">Co chcesz obejrzeć?</label>
+        <select id="video-options" name="videos">
+            <option value="" selected disabled>Wybierz</option>
+            <option value="serial1">Serial 1</option>
+            <option value="serial2">Serial 2</option>
+            <option value="film">Film</option>
+        </select>
+    </section>
+
+    <section class="link-container">
+        <div id="video-links">
+            <!-- Linki do filmów będą dodane dynamicznie przez JavaScript -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Dexter. Wszelkie prawa zastrzeżone.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</body>
+</html>

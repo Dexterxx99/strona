@@ -1,0 +1,121 @@
+/* Stylizacje ogólne dla strony */
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #1c1c1c;
+    border-bottom: 2px solid #ff4081;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+/* Stylizacja dla kontenera wyboru (rozwijane menu) */
+.select-container {
+    text-align: center;
+    margin-top: 20px;
+    position: relative;
+}
+
+/* Stylizacja etykiety dla rozwijanych menu */
+label {
+    font-size: 1.4rem;
+    color: #ff4081;
+    margin-bottom: 10px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+/* Stylizacja rozwijanych menu (select) */
+select {
+    background-color: #1c1c1c;
+    color: #ffffff;
+    border: 2px solid #ff4081;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-align: center;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+/* Efekt hover dla rozwijanego menu */
+select:hover {
+    background-color: #ff4081;
+    color: #1c1c1c;
+    border-color: #ffffff;
+}
+
+/* Pseudoelement dla strzałki w rozwijanym menu */
+.select-container::after {
+    content: '▼';
+    color: #ffffff;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    font-size: 1rem;
+}
+
+/* Efekt focus (kliknięcie) dla rozwijanego menu */
+select:focus {
+    outline: none;
+    box-shadow: 0 0 5px 2px rgba(255, 64, 129, 0.75);
+}
+
+/* Stylizacja dla kontenera linków */
+.link-container {
+    text-align: center;
+    margin: 20px auto;
+}
+
+/* Stylizacja linków do filmów */
+.link-container a {
+    display: block;
+    background-color: #1c1c1c;
+    color: #ffffff;
+    padding: 10px 20px;
+    margin: 10px auto;
+    text-decoration: none;
+    border: 2px solid #ff4081;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.link-container a:hover {
+    background-color: #ff4081;
+    color: #1c1c1c;
+}
+
+/* Stylizacja stopki */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1c1c1c;
+    border-top: 2px solid #ff4081;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+p {
+    margin: 0;
+}
