@@ -2,16 +2,17 @@
 body {
     background-color: #121212;
     color: #ffffff;
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
 }
 
+/* Stylizacja nagłówka */
 header {
     text-align: center;
-    padding: 50px 0;
+    padding: 30px 0;
     background-color: #1c1c1c;
-    border-bottom: 2px solid #ff4081;
+    border-bottom: 4px solid #ff4081;
 }
 
 h1 {
@@ -19,19 +20,20 @@ h1 {
     margin: 0;
 }
 
-/* Stylizacja dla kontenera wyboru (rozwijane menu) */
+/* Stylizacja kontenera wyboru (rozwijane menu) */
 .select-container {
     text-align: center;
-    margin-top: 20px;
+    margin: 20px auto;
     position: relative;
+    max-width: 600px;
 }
 
 /* Stylizacja etykiety dla rozwijanych menu */
 label {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     color: #ff4081;
     margin-bottom: 10px;
-    display: inline-block;
+    display: block;
     font-weight: bold;
 }
 
@@ -41,7 +43,7 @@ select {
     color: #ffffff;
     border: 2px solid #ff4081;
     padding: 12px 20px;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     border-radius: 5px;
     cursor: pointer;
     appearance: none;
@@ -68,7 +70,7 @@ select:hover {
     top: 50%;
     transform: translateY(-50%);
     pointer-events: none;
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 /* Efekt focus (kliknięcie) dla rozwijanego menu */
@@ -77,10 +79,15 @@ select:focus {
     box-shadow: 0 0 5px 2px rgba(255, 64, 129, 0.75);
 }
 
-/* Stylizacja dla kontenera linków */
-.link-container {
+/* Stylizacja kontenera sezonów i odcinków */
+.season-container, .episode-container {
     text-align: center;
     margin: 20px auto;
+    max-width: 600px;
+}
+
+.season-container select, .episode-container select {
+    width: 100%;
 }
 
 /* Stylizacja linków do filmów */
@@ -110,7 +117,7 @@ footer {
     text-align: center;
     padding: 20px;
     background-color: #1c1c1c;
-    border-top: 2px solid #ff4081;
+    border-top: 4px solid #ff4081;
     position: relative;
     bottom: 0;
     width: 100%;
@@ -118,4 +125,5 @@ footer {
 
 p {
     margin: 0;
+    font-size: 1rem;
 }
