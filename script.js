@@ -123,7 +123,7 @@ function getVideoUrl(series, season, episode) {
             'season1': {
                 'odcinek-1': 'https://www.youtube.com/watch?v=GbpGytJ9nCA',
                 'odcinek-2': 'https://www.youtube.com/watch?v=F6kaVFHPT6w',
-                'odcinek-3': 'https://www.youtube.com/watch?v=example3',
+                'odcinek-3': 'https://www.youtube.com/watch?v=64ba0-qNTXY',
                 'odcinek-4': 'https://www.youtube.com/watch?v=example4',
                 'odcinek-5': 'https://www.youtube.com/watch?v=example5',
                 'odcinek-6': 'https://www.youtube.com/watch?v=7Vr7ZVlkqgg',
