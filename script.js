@@ -21,10 +21,6 @@ document.getElementById('video-options').addEventListener('change', function() {
         });
 
         seasonContainer.style.display = 'block';
-
-        // Automatyczne wybranie i załadowanie odcinków dla "Sezon 1"
-        seasonSelect.value = 'season1';
-        populateEpisodes(selectedValue, 'season1');
     } else {
         populateEpisodes(selectedValue, null);
     }
@@ -45,7 +41,7 @@ function populateEpisodes(series, season) {
     const episodes = {
         'serial1': {
             'season1': ['Odcinek 1', 'Odcinek 2', 'Odcinek 3'],
-            'season2': ['Odcinek 1', 'Odcinek 2','Odcinek 3','Odcinek 4','Odcinek 5','Odcinek 6','Odcinek 7','Odcinek 8','Odcinek 9','Odcinek 10'],
+            'season2': ['Odcinek 1', 'Odcinek 2'],
             'season3': ['Odcinek 1', 'Odcinek 2', 'Odcinek 3', 'Odcinek 4'],
             'season4': ['Odcinek 1', 'Odcinek 2']
         },
@@ -69,10 +65,6 @@ function populateEpisodes(series, season) {
             episodeSelect.appendChild(option);
         });
         episodeContainer.style.display = 'block';
-
-        // Automatyczne wybranie pierwszego odcinka po załadowaniu
-        episodeSelect.value = episodeSelect.options[0].value;
-        episodeSelect.dispatchEvent(new Event('change'));
     } else {
         episodeContainer.style.display = 'none';
     }
@@ -89,34 +81,20 @@ function populateEpisodes(series, season) {
 
         videoLinks.style.display = 'block';
     });
-
-    // Automatycznie wyświetl pierwszy odcinek, jeśli sezon został wybrany
-    if (episodeSelect.options.length > 0) {
-        episodeSelect.value = episodeSelect.options[0].value;
-        episodeSelect.dispatchEvent(new Event('change'));
-    }
 }
 
 function getVideoUrl(series, episode) {
     // Zwraca odpowiedni URL na podstawie wyboru
     const urls = {
         'serial1': {
-            'odcinek-1': 'https://www.youtube.com/watch?v=kCfz7qEmJR4',  // Zamień na odpowiednie VIDEO_ID
+            'odcinek-1': 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',  // Zamień na odpowiednie VIDEO_ID
             'odcinek-2': 'https://www.youtube.com/watch?v=kJQP7kiw5Fk',
             'odcinek-3': 'https://www.youtube.com/watch?v=3JZ_D3ELwOQ',
             'odcinek-4': 'https://www.youtube.com/watch?v=8ZcmTl_1ER8'
         },
         'serial2': {
-            'odcinek-1': 'https://www.youtube.com/watch?v=7K3urTkOsQ0',
-            'odcinek-2': 'https://www.youtube.com/watch?v=2HG7Q1gnKnE',
-            'odcinek-3': 'https://www.youtube.com/watch?v=dJxcEtol7ZY',
-            'odcinek-4': 'https://www.youtube.com/watch?v=9sMDxGKJ4dE',
-            'odcinek-5': 'https://www.youtube.com/watch?v=MgsSPvPub0c',
-            'odcinek-6': 'https://www.youtube.com/watch?v=PHpMVhDkKFU',
-            'odcinek-7': 'https://www.youtube.com',
-            'odcinek-8': 'https://www.youtube.com',
-            'odcinek-9': 'https://www.youtube.com',
-            'odcinek-10': 'https://www.youtube.com'
+            'odcinek-1': 'https://www.youtube.com/watch?v=VGCEWAZV3zY',
+            'odcinek-2': 'https://www.youtube.com/watch?v=tVj0ZTS4WF4'
         },
         'film': {
             'wersja-rezyserska': 'https://www.youtube.com/watch?v=VGCEWAZV3zY',
