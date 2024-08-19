@@ -5,7 +5,7 @@ document.getElementById('video-options').addEventListener('change', function() {
     videoLinks.innerHTML = '';  // Czyści poprzednie linki
 
     let episodes = [];
-    if (selectedValue === 'serial1') {
+    if (selectedValue === 'Jeźdzcy smoków') {
         episodes = ['Odcinek 1', 'Odcinek 2', 'Odcinek 3'];
     } else if (selectedValue === 'serial2') {
         episodes = ['Odcinek 1', 'Odcinek 2'];
