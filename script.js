@@ -21,6 +21,10 @@ document.getElementById('video-options').addEventListener('change', function() {
         });
 
         seasonContainer.style.display = 'block';
+
+        // Automatyczne wybranie i załadowanie odcinków dla "Sezon 1"
+        seasonSelect.value = 'season1';
+        populateEpisodes(selectedValue, 'season1');
     } else {
         populateEpisodes(selectedValue, null);
     }
@@ -65,6 +69,10 @@ function populateEpisodes(series, season) {
             episodeSelect.appendChild(option);
         });
         episodeContainer.style.display = 'block';
+
+        // Automatyczne wybranie pierwszego odcinka po załadowaniu
+        episodeSelect.value = episodeSelect.options[0].value;
+        episodeSelect.dispatchEvent(new Event('change'));
     } else {
         episodeContainer.style.display = 'none';
     }
