@@ -29,7 +29,7 @@ document.getElementById('video-options').addEventListener('change', function() {
 function getVideoUrl(series, episode) {
     // Zwraca odpowiedni URL na podstawie wyboru
     const urls = {
-        'serial1': {
+        'Jeźdcy smoków': {
             'odcinek-1': 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',  // Zamień na odpowiednie VIDEO_ID
             'odcinek-2': 'https://www.youtube.com/watch?v=kJQP7kiw5Fk',
             'odcinek-3': 'https://www.youtube.com/watch?v=3JZ_D3ELwOQ'
