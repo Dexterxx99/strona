@@ -121,7 +121,7 @@ function getVideoUrl(series, season, episode) {
     const urls = {
         'lego-nexo-knights': {
             'season1': {
-                'odcinek-1': 'https://www.youtube.com/watch?v=example1',
+                'odcinek-1': 'https://www.youtube.com/watch?v=GbpGytJ9nCA',
                 'odcinek-2': 'https://www.youtube.com/watch?v=example2',
                 'odcinek-3': 'https://www.youtube.com/watch?v=example3',
                 'odcinek-4': 'https://www.youtube.com/watch?v=example4',
