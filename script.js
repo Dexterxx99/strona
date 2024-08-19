@@ -104,4 +104,3 @@ function getVideoUrl(series, episode) {
 
     return urls[series] ? urls[series][episode] || '' : '';
 }
-}
