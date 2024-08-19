@@ -89,13 +89,19 @@ function populateEpisodes(series, season) {
 
         videoLinks.style.display = 'block';
     });
+
+    // Automatycznie wyświetl pierwszy odcinek, jeśli sezon został wybrany
+    if (episodeSelect.options.length > 0) {
+        episodeSelect.value = episodeSelect.options[0].value;
+        episodeSelect.dispatchEvent(new Event('change'));
+    }
 }
 
 function getVideoUrl(series, episode) {
     // Zwraca odpowiedni URL na podstawie wyboru
     const urls = {
         'serial1': {
-            'odcinek-1': 'https://www.youtube.com/watch?v=kCfz7qEmJR4',  // Zamień na odpowiednie VIDEO_ID
+            'odcinek-1': 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',  // Zamień na odpowiednie VIDEO_ID
             'odcinek-2': 'https://www.youtube.com/watch?v=kJQP7kiw5Fk',
             'odcinek-3': 'https://www.youtube.com/watch?v=3JZ_D3ELwOQ',
             'odcinek-4': 'https://www.youtube.com/watch?v=8ZcmTl_1ER8'
