@@ -319,8 +319,8 @@ function getVideoUrl(series, season, episode) {
         },
         'jezdzcy-smokow': {
             'season1': {
-                'odcinek-1': 'https://drive.google.com/file/d/1g2FJbD58QCWZQXys9IXaz-4DN1jbPPc2/view?usp=drive_link',
-                'odcinek-2': 'https://drive.google.com/drive/folders/example13',
+                'odcinek-1': 'https://drive.google.com/file/d/1PmKhGr0b0NCrLapA-kH1a_KOjEotA9EE/view?usp=sharing',
+                'odcinek-2': 'https://drive.google.com/file/d/12bt923JUaCVa3BTbvEjSvfFeEz4jlV7f/view?usp=sharing',
                 'odcinek-3': 'https://drive.google.com/drive/folders/example14',
                 'odcinek-4': 'https://drive.google.com/drive/folders/example15',
                 'odcinek-5': 'https://drive.google.com/drive/folders/example16',
