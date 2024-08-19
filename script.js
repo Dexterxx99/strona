@@ -223,68 +223,17 @@ function getVideoUrl(series, season, episode) {
         'generator-rex': {
             'season1': {
                 'odcinek-1': 'https://www.youtube.com/watch?v=example93',
-                'odcinek-2': 'https://www.youtube.com/watch?v=example94',
-                'odcinek-3': 'https://www.youtube.com/watch?v=example95',
-                'odcinek-4': 'https://www.youtube.com/watch?v=example96',
-                'odcinek-5': 'https://www.youtube.com/watch?v=example97',
-                'odcinek-6': 'https://www.youtube.com/watch?v=example98',
-                'odcinek-7': 'https://www.youtube.com/watch?v=example99',
-                'odcinek-8': 'https://www.youtube.com/watch?v=example100',
-                'odcinek-9': 'https://www.youtube.com/watch?v=example101',
-                'odcinek-10': 'https://www.youtube.com/watch?v=example102',
-                'odcinek-11': 'https://www.youtube.com/watch?v=example103',
-                'odcinek-12': 'https://www.youtube.com/watch?v=example104',
-                'odcinek-13': 'https://www.youtube.com/watch?v=example105',
-                'odcinek-14': 'https://www.youtube.com/watch?v=example106',
-                'odcinek-15': 'https://www.youtube.com/watch?v=example107',
-                'odcinek-16': 'https://www.youtube.com/watch?v=example108',
-                'odcinek-17': 'https://www.youtube.com/watch?v=example109',
-                'odcinek-18': 'https://www.youtube.com/watch?v=example110',
-                'odcinek-19': 'https://www.youtube.com/watch?v=example111',
+             
                 'odcinek-20': 'https://www.youtube.com/watch?v=example112'
             },
             'season2': {
                 'odcinek-1': 'https://www.youtube.com/watch?v=example113',
-                'odcinek-2': 'https://www.youtube.com/watch?v=example114',
-                'odcinek-3': 'https://www.youtube.com/watch?v=example115',
-                'odcinek-4': 'https://www.youtube.com/watch?v=example116',
-                'odcinek-5': 'https://www.youtube.com/watch?v=example117',
-                'odcinek-6': 'https://www.youtube.com/watch?v=example118',
-                'odcinek-7': 'https://www.youtube.com/watch?v=example119',
-                'odcinek-8': 'https://www.youtube.com/watch?v=example120',
-                'odcinek-9': 'https://www.youtube.com/watch?v=example121',
-                'odcinek-10': 'https://www.youtube.com/watch?v=example122',
-                'odcinek-11': 'https://www.youtube.com/watch?v=example123',
-                'odcinek-12': 'https://www.youtube.com/watch?v=example124',
-                'odcinek-13': 'https://www.youtube.com/watch?v=example125',
-                'odcinek-14': 'https://www.youtube.com/watch?v=example126',
-                'odcinek-15': 'https://www.youtube.com/watch?v=example127',
-                'odcinek-16': 'https://www.youtube.com/watch?v=example128',
-                'odcinek-17': 'https://www.youtube.com/watch?v=example129',
-                'odcinek-18': 'https://www.youtube.com/watch?v=example130',
-                'odcinek-19': 'https://www.youtube.com/watch?v=example131',
+               
                 'odcinek-20': 'https://www.youtube.com/watch?v=example132'
             },
             'season3': {
                 'odcinek-1': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-2': 'https://www.youtube.com/watch?v=example134',
-                'odcinek-3': 'https://www.youtube.com/watch?v=example135',
-                'odcinek-4': 'https://www.youtube.com/watch?v=example136',
-                'odcinek-5': 'https://www.youtube.com/watch?v=example137',
-                'odcinek-6': 'https://www.youtube.com/watch?v=example138',
-                'odcinek-7': 'https://www.youtube.com/watch?v=example139',
-                'odcinek-8': 'https://www.youtube.com/watch?v=example140',
-                'odcinek-9': 'https://www.youtube.com/watch?v=example141',
-                'odcinek-10': 'https://www.youtube.com/watch?v=example142',
-                'odcinek-11': 'https://www.youtube.com/watch?v=example143',
-                'odcinek-12': 'https://www.youtube.com/watch?v=example144',
-                'odcinek-13': 'https://www.youtube.com/watch?v=example145',
-                'odcinek-14': 'https://www.youtube.com/watch?v=example146',
-                'odcinek-15': 'https://www.youtube.com/watch?v=example147',
-                'odcinek-16': 'https://www.youtube.com/watch?v=example148',
-                'odcinek-17': 'https://www.youtube.com/watch?v=example149',
-                'odcinek-18': 'https://www.youtube.com/watch?v=example150',
-                'odcinek-19': 'https://www.youtube.com/watch?v=example151'
+                
                 'odcinek-20': 'https://www.youtube.com/watch?v=example152'
             }
         }
