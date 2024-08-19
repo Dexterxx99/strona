@@ -110,191 +110,68 @@ function getVideoUrl(series, season, episode) {
     const urls = {
         'lego-nexo-knights': {
             'season1': {
-                'odcinek-1': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-2': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-3': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-4': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-5': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-6': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-7': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-8': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-9': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-10': 'https://www.youtube.com/watch?v=example133',
-           
+                'odcinek-1': 'https://www.youtube.com/watch?v=example1',  // Zamień na odpowiednie VIDEO_ID
+                'odcinek-2': 'https://www.youtube.com/watch?v=example2',
+                'odcinek-3': 'https://www.youtube.com/watch?v=example3',
+                // Dodaj pozostałe odcinki
+                'odcinek-10': 'https://www.youtube.com/watch?v=example10'
             },
             'season2': {
-                'odcinek-1': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-2': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-3': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-4': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-5': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-6': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-7': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-8': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-9': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-10': 'https://www.youtube.com/watch?v=example133',
-              
+                'odcinek-1': 'https://www.youtube.com/watch?v=example11',
+                // Dodaj pozostałe odcinki
+                'odcinek-10': 'https://www.youtube.com/watch?v=example20'
             },
             'season3': {
-               'odcinek-1': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-2': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-3': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-4': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-5': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-6': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-7': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-8': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-9': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-10': 'https://www.youtube.com/watch?v=example133',
-             
+                'odcinek-1': 'https://www.youtube.com/watch?v=example21',
+                // Dodaj pozostałe odcinki
+                'odcinek-10': 'https://www.youtube.com/watch?v=example30'
+            },
             'season4': {
-                'odcinek-1': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-2': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-3': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-4': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-5': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-6': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-7': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-8': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-9': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-10': 'https://www.youtube.com/watch?v=example133',
-           
+                'odcinek-1': 'https://www.youtube.com/watch?v=example31',
+                // Dodaj pozostałe odcinki
+                'odcinek-10': 'https://www.youtube.com/watch?v=example40'
             }
         },
         'slugterra': {
             'season1': {
-                'odcinek-1': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-2': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-3': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-4': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-5': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-6': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-7': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-8': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-9': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-10': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-11': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-12': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-13': 'https://www.youtube.com/watch?v=example133',
-           
+                'odcinek-1': 'https://www.youtube.com/watch?v=example41',
+                // Dodaj pozostałe odcinki
+                'odcinek-13': 'https://www.youtube.com/watch?v=example53'
             },
             'season2': {
-                'odcinek-1': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-2': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-3': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-4': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-5': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-6': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-7': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-8': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-9': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-10': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-11': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-12': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-13': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-14': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-15': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-16': 'https://www.youtube.com/watch?v=example133',
-                
+                'odcinek-1': 'https://www.youtube.com/watch?v=example54',
+                // Dodaj pozostałe odcinki
+                'odcinek-16': 'https://www.youtube.com/watch?v=example69'
             },
             'season3': {
-                'odcinek-1': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-2': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-3': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-4': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-5': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-6': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-7': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-8': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-9': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-10': 'https://www.youtube.com/watch?v=example133',
-               
+                'odcinek-1': 'https://www.youtube.com/watch?v=example70',
+                // Dodaj pozostałe odcinki
+                'odcinek-10': 'https://www.youtube.com/watch?v=example79'
             },
             'season4': {
-                'odcinek-1': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-2': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-3': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-4': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-5': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-6': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-7': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-8': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-9': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-10': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-11': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-12': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-13': 'https://www.youtube.com/watch?v=example133',
-                
+                'odcinek-1': 'https://www.youtube.com/watch?v=example80',
+                // Dodaj pozostałe odcinki
+                'odcinek-13': 'https://www.youtube.com/watch?v=example92'
             }
         },
         'generator-rex': {
             'season1': {
-                'odcinek-1': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-2': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-3': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-4': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-5': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-6': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-7': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-8': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-9': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-10': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-11': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-12': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-13': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-14': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-15': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-16': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-17': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-18': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-19': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-20': 'https://www.youtube.com/watch?v=example153'
+                'odcinek-1': 'https://www.youtube.com/watch?v=example93',
+                // Dodaj pozostałe odcinki
+                'odcinek-20': 'https://www.youtube.com/watch?v=example112'
             },
             'season2': {
-                'odcinek-1': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-2': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-3': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-4': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-5': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-6': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-7': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-8': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-9': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-10': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-11': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-12': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-13': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-14': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-15': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-16': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-17': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-18': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-19': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-20': 'https://www.youtube.com/watch?v=example153'
+                'odcinek-1': 'https://www.youtube.com/watch?v=example113',
+                // Dodaj pozostałe odcinki
+                'odcinek-20': 'https://www.youtube.com/watch?v=example132'
             },
             'season3': {
                 'odcinek-1': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-2': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-3': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-4': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-5': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-6': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-7': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-8': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-9': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-10': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-11': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-12': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-13': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-14': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-15': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-16': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-17': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-18': 'https://www.youtube.com/watch?v=example133',
-                'odcinek-19': 'https://www.youtube.com/watch?v=example133',
+                // Dodaj pozostałe odcinki
                 'odcinek-20': 'https://www.youtube.com/watch?v=example153'
             }
         }
     };
-    return urls[series][season][episode] || '#'; // Zwraca '#' jeśli URL nie istnieje
+
+    return urls[series] && urls[series][season] ? urls[series][season][episode] || '#' : '#'; // Zwraca '#' jeśli URL nie istnieje
 }
