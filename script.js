@@ -56,11 +56,20 @@ function populateSeasons(seasons) {
         seasonSelect.appendChild(option);
     }
 
-    seasonSelect.addEventListener('change', function() {
+    // Usuwanie poprzedniego event listenera, jeśli istnieje
+    const oldSeasonChangeHandler = seasonSelect.getAttribute('data-change-handler');
+    if (oldSeasonChangeHandler) {
+        seasonSelect.removeEventListener('change', oldSeasonChangeHandler);
+    }
+
+    const newSeasonChangeHandler = function() {
         const selectedSeason = this.value;
         populateEpisodes(selectedSeason);
-    });
+    };
 
+    seasonSelect.addEventListener('change', newSeasonChangeHandler);
+    seasonSelect.setAttribute('data-change-handler', newSeasonChangeHandler);
+    
     seasonSelect.value = Object.keys(seasons)[0]; // Ustaw pierwszy sezon jako domyślny
     seasonSelect.dispatchEvent(new Event('change')); // Symuluje wybór sezonu, aby pokazać odcinek 1
 }
@@ -83,11 +92,20 @@ function populateEpisodes(season) {
         episodeSelect.appendChild(option);
     }
 
-    episodeSelect.addEventListener('change', function() {
+    // Usuwanie poprzedniego event listenera, jeśli istnieje
+    const oldEpisodeChangeHandler = episodeSelect.getAttribute('data-change-handler');
+    if (oldEpisodeChangeHandler) {
+        episodeSelect.removeEventListener('change', oldEpisodeChangeHandler);
+    }
+
+    const newEpisodeChangeHandler = function() {
         const selectedEpisode = this.value;
         updateVideoLinks(season, selectedEpisode);
-    });
+    };
 
+    episodeSelect.addEventListener('change', newEpisodeChangeHandler);
+    episodeSelect.setAttribute('data-change-handler', newEpisodeChangeHandler);
+    
     episodeSelect.value = 'odcinek-1'; // Ustaw pierwszy odcinek jako domyślny
     episodeSelect.dispatchEvent(new Event('change')); // Symuluje wybór odcinka, aby pokazać odcinek 1
 }
@@ -456,5 +474,5 @@ function getVideoUrl(series, season, episode) {
         }
     };
 
-    return urls[series] && urls[series][season] && urls[series][season][episode] || '#';
+    return urls[series]?.[season]?.[episode] || '';
 }
