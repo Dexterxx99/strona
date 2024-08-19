@@ -15,24 +15,27 @@
         <label for="video-options">Co chcesz obejrzeć?</label>
         <select id="video-options" name="videos">
             <option value="" selected disabled>Wybierz</option>
-            <option value="serial1">Jezdzcy smokow</option>
-            <option value="serial2">Generator Rex</option>
+            <option value="serial1">Serial 1</option>
+            <option value="serial2">Serial 2</option>
             <option value="film">Film</option>
         </select>
     </section>
-<section class="select-container" id="season-container" style="display:none;">
+
+    <section class="select-container" id="season-container" style="display:none;">
         <label for="season-options">Wybierz sezon</label>
         <select id="season-options" name="seasons">
             <!-- Sezony będą dodane dynamicznie -->
         </select>
     </section>
+
     <section class="select-container" id="episode-container" style="display:none;">
         <label for="episode-options">Wybierz odcinek</label>
         <select id="episode-options" name="episodes">
             <!-- Odcinki będą dodane dynamicznie -->
         </select>
     </section>
- <section class="link-container">
+
+    <section class="link-container">
         <div id="video-links">
             <!-- Linki do filmów będą dodane dynamicznie przez JavaScript -->
         </div>
@@ -43,6 +46,5 @@
     </footer>
     
     <script src="script.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </body>
 </html>
