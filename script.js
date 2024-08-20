@@ -3,9 +3,10 @@ document.getElementById('video-options').addEventListener('change', function() {
     const episodeContainer = document.getElementById('episode-container');
     const seasonSelect = document.getElementById('season-options');
     const episodeSelect = document.getElementById('episode-options');
+    const videoLinks = document.getElementById('video-links');
 
     // Ukryj kontener linków
-    document.getElementById('video-links').innerHTML = '';
+    videoLinks.innerHTML = '';
 
     const selectedValue = this.value;
 
@@ -93,17 +94,23 @@ function populateEpisodes(series, season) {
 
     episodeSelect.addEventListener('change', function() {
         const selectedEpisode = this.value;
-        videoLinks.innerHTML = ''; // Czyści poprzednie linki
-
-        const link = document.createElement('a');
-        link.href = getVideoUrl(series, season, selectedEpisode);
-        link.textContent = this.options[this.selectedIndex].text;
-        link.target = '_blank'; // Otwiera link w nowej karcie
-        videoLinks.appendChild(link);
-
-        videoLinks.style.display = 'block';
+        updateVideoLinks(series, season, selectedEpisode);
     });
 }
+
+function updateVideoLinks(series, season, episode) {
+    const videoLinks = document.getElementById('video-links');
+    videoLinks.innerHTML = ''; // Czyści poprzednie linki
+
+    const link = document.createElement('a');
+    link.href = getVideoUrl(series, season, episode);
+    link.textContent = episode.replace('-', ' ');
+    link.target = '_blank'; // Otwiera link w nowej karcie
+    videoLinks.appendChild(link);
+
+    videoLinks.style.display = 'block';
+}
+
 
 function getVideoUrl(series, season, episode) {
     // Zwraca odpowiedni URL na podstawie wyboru
