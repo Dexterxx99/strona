@@ -160,7 +160,7 @@ function getVideoUrl(series, season, episode) {
         },
         'slugterra': {
             'season1': {
-                'odcinek-1': 'https://www.youtube.com/watch?v=example41',
+                'odcinek-1': 'https://www.youtube.com/watch?v=d2N6WzDE_DQ',
                 'odcinek-2': 'https://www.youtube.com/watch?v=example42',
                 'odcinek-3': 'https://www.youtube.com/watch?v=example43',
                 'odcinek-4': 'https://www.youtube.com/watch?v=example44',
