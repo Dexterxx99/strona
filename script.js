@@ -229,7 +229,7 @@ function getVideoUrl(series, season, episode) {
         },
         'generator-rex': {
             'season1': {
-                'odcinek-1': 'https://www.youtube.com/watch?v=example93',
+                'odcinek-1': 'https://drive.google.com/file/d/1PmKhGr0b0NCrLapA-kH1a_KOjEotA9EE/view',
                 'odcinek-2': 'https://www.youtube.com/watch?v=example94',
                 'odcinek-3': 'https://www.youtube.com/watch?v=example95',
                 'odcinek-4': 'https://www.youtube.com/watch?v=example96',
