@@ -1,4 +1,95 @@
-    return urls[series]?.[season]?.[episode] || '';
+document.getElementById('video-options').addEventListener('change', function() {
+    const seasonContainer = document.getElementById('season-container');
+    const episodeContainer = document.getElementById('episode-container');
+    const videoLinks = document.getElementById('video-links');
+    const selectedValue = this.value;
+
+    seasonContainer.style.display = 'block';
+    episodeContainer.style.display = 'none';
+    videoLinks.innerHTML = ''; // Czyści poprzednie linki
+
+    let seasons = {};
+    if (selectedValue === 'lego-nexo-knights') {
+        seasons = {
+            'season1': 'Sezon 1',
+            'season2': 'Sezon 2',
+            'season3': 'Sezon 3',
+            'season4': 'Sezon 4'
+        };
+    } else if (selectedValue === 'slugterra') {
+        seasons = {
+            'season1': 'Sezon 1',
+            'season2': 'Sezon 2',
+            'season3': 'Sezon 3',
+            'season4': 'Sezon 4'
+        };
+    } else if (selectedValue === 'generator-rex') {
+        seasons = {
+            'season1': 'Sezon 1',
+            'season2': 'Sezon 2',
+            'season3': 'Sezon 3'
+        };
+    } else if (selectedValue === 'jezdzcy-smokow') {
+        seasons = {
+            'season1': 'Sezon 1',
+            'season2': 'Sezon 2',
+            'season3': 'Sezon 3',
+            'season4': 'Sezon 4',
+            'season5': 'Sezon 5',
+            'season6': 'Sezon 6',
+            'season7': 'Sezon 7',
+            'season8': 'Sezon 8'
+        };
+    }
+
+    populateSeasons(seasons);
+});
+
+function populateSeasons(seasons) {
+    const seasonSelect = document.getElementById('season-options');
+    seasonSelect.innerHTML = ''; // Czyszczenie poprzednich opcji
+
+    for (const [value, text] of Object.entries(seasons)) {
+        const option = document.createElement('option');
+        option.value = value;
+        option.textContent = text;
+        seasonSelect.appendChild(option);
+    }
+
+    seasonSelect.addEventListener('change', function() {
+        const selectedSeason = this.value;
+        populateEpisodes(selectedSeason);
+    });
+
+    seasonSelect.value = Object.keys(seasons)[0]; // Ustaw pierwszy sezon jako domyślny
+    seasonSelect.dispatchEvent(new Event('change')); // Symuluje wybór sezonu, aby pokazać odcinek 1
+}
+
+function populateEpisodes(season) {
+    const episodeContainer = document.getElementById('episode-container');
+    const episodeSelect = document.getElementById('episode-options');
+    const videoLinks = document.getElementById('video-links');
+
+    episodeContainer.style.display = 'block';
+    episodeSelect.innerHTML = ''; // Czyszczenie poprzednich opcji
+    videoLinks.innerHTML = ''; // Czyszczenie poprzednich linków
+
+    const episodesCount = getEpisodesCount(season);
+
+    for (let i = 1; i <= episodesCount; i++) {
+        const option = document.createElement('option');
+        option.value = `odcinek-${i}`;
+        option.textContent = `Odcinek ${i}`;
+        episodeSelect.appendChild(option);
+    }
+
+    episodeSelect.addEventListener('change', function() {
+        const selectedEpisode = this.value;
+        updateVideoLinks(season, selectedEpisode);
+    });
+
+    episodeSelect.value = 'odcinek-1'; // Ustaw pierwszy odcinek jako domyślny
+    episodeSelect.dispatchEvent(new Event('change')); // Symuluje wybór odcinka, aby pokazać odcinek 1
 }
 
 function getEpisodesCount(season) {
@@ -365,5 +456,5 @@ function getVideoUrl(series, season, episode) {
         }
     };
 
-    return urls[series]?.[season]?.[episode] || '';
+    return urls[series] && urls[series][season] && urls[series][season][episode] || '#';
 }
