@@ -86,7 +86,7 @@ function populateEpisodes(series, season) {
         // Automatycznie wyświetl pierwszy odcinek po załadowaniu
         if (episodeSelect.options.length > 0) {
             episodeSelect.value = episodeSelect.options[0].value;
-            episodeSelect.dispatchEvent(new Event('change'));
+            updateVideoLinks(series, season, episodeSelect.value);
         }
     } else {
         episodeContainer.style.display = 'none';
