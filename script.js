@@ -1,119 +1,108 @@
 document.getElementById('video-options').addEventListener('change', function() {
     const seasonContainer = document.getElementById('season-container');
     const episodeContainer = document.getElementById('episode-container');
-    const videoLinks = document.getElementById('video-links');
+    const seasonSelect = document.getElementById('season-options');
+    const episodeSelect = document.getElementById('episode-options');
+
+    // Ukryj kontener linków
+    document.getElementById('video-links').innerHTML = '';
+
     const selectedValue = this.value;
 
-    seasonContainer.style.display = 'block';
+    seasonContainer.style.display = 'none';
     episodeContainer.style.display = 'none';
-    videoLinks.innerHTML = ''; // Czyści poprzednie linki
 
-    let seasons = {};
-    if (selectedValue === 'lego-nexo-knights') {
-        seasons = {
-            'season1': 'Sezon 1',
-            'season2': 'Sezon 2',
-            'season3': 'Sezon 3',
-            'season4': 'Sezon 4'
+    // Wypełnij sezonami odpowiedni kontener
+    if (selectedValue === 'lego-nexo-knights' || selectedValue === 'slugterra' || selectedValue === 'generator-rex') {
+        const seasons = {
+            'lego-nexo-knights': ['Sezon 1', 'Sezon 2', 'Sezon 3', 'Sezon 4'],
+            'slugterra': ['Sezon 1', 'Sezon 2', 'Sezon 3', 'Sezon 4'],
+            'generator-rex': ['Sezon 1', 'Sezon 2', 'Sezon 3']
         };
-    } else if (selectedValue === 'slugterra') {
-        seasons = {
-            'season1': 'Sezon 1',
-            'season2': 'Sezon 2',
-            'season3': 'Sezon 3',
-            'season4': 'Sezon 4'
-        };
-    } else if (selectedValue === 'generator-rex') {
-        seasons = {
-            'season1': 'Sezon 1',
-            'season2': 'Sezon 2',
-            'season3': 'Sezon 3'
-        };
-    } 
 
-    populateSeasons(seasons);
+        seasonSelect.innerHTML = ''; // Czyści poprzednie sezony
+
+        seasons[selectedValue].forEach(function(season, index) {
+            const option = document.createElement('option');
+            option.value = 'season' + (index + 1);
+            option.textContent = season;
+            seasonSelect.appendChild(option);
+        });
+
+        seasonContainer.style.display = 'block';
+        // Automatycznie załaduj odcinki dla "Sezon 1"
+        seasonSelect.value = 'season1';
+        seasonSelect.dispatchEvent(new Event('change'));
+    }
 });
 
-function populateSeasons(seasons) {
-    const seasonSelect = document.getElementById('season-options');
-    seasonSelect.innerHTML = ''; // Czyszczenie poprzednich opcji
+document.getElementById('season-options').addEventListener('change', function() {
+    const selectedSeries = document.getElementById('video-options').value;
+    const selectedSeason = this.value;
+    populateEpisodes(selectedSeries, selectedSeason);
+});
 
-    for (const [value, text] of Object.entries(seasons)) {
-        const option = document.createElement('option');
-        option.value = value;
-        option.textContent = text;
-        seasonSelect.appendChild(option);
-    }
-
-    seasonSelect.addEventListener('change', function() {
-        const selectedSeason = this.value;
-        populateEpisodes(selectedSeason);
-    });
-
-    seasonSelect.value = Object.keys(seasons)[0]; // Ustaw pierwszy sezon jako domyślny
-    seasonSelect.dispatchEvent(new Event('change')); // Symuluje wybór sezonu, aby pokazać odcinek 1
-}
-
-function populateEpisodes(season) {
+function populateEpisodes(series, season) {
     const episodeContainer = document.getElementById('episode-container');
     const episodeSelect = document.getElementById('episode-options');
     const videoLinks = document.getElementById('video-links');
 
-    episodeContainer.style.display = 'block';
-    episodeSelect.innerHTML = ''; // Czyszczenie poprzednich opcji
-    videoLinks.innerHTML = ''; // Czyszczenie poprzednich linków
+    videoLinks.innerHTML = ''; // Czyści poprzednie linki
 
-    const episodesCount = getEpisodesCount(season);
+    const episodes = {
+        'lego-nexo-knights': {
+            'season1': Array.from({ length: 10 }, (_, i) => `Odcinek ${i + 1}`),
+            'season2': Array.from({ length: 10 }, (_, i) => `Odcinek ${i + 1}`),
+            'season3': Array.from({ length: 10 }, (_, i) => `Odcinek ${i + 1}`),
+            'season4': Array.from({ length: 10 }, (_, i) => `Odcinek ${i + 1}`)
+        },
+        'slugterra': {
+            'season1': Array.from({ length: 13 }, (_, i) => `Odcinek ${i + 1}`),
+            'season2': Array.from({ length: 16 }, (_, i) => `Odcinek ${i + 1}`),
+            'season3': Array.from({ length: 10 }, (_, i) => `Odcinek ${i + 1}`),
+            'season4': Array.from({ length: 13 }, (_, i) => `Odcinek ${i + 1}`)
+        },
+        'generator-rex': {
+            'season1': Array.from({ length: 20 }, (_, i) => `Odcinek ${i + 1}`),
+            'season2': Array.from({ length: 20 }, (_, i) => `Odcinek ${i + 1}`),
+            'season3': Array.from({ length: 20 }, (_, i) => `Odcinek ${i + 1}`)
+        }
+    };
 
-    for (let i = 1; i <= episodesCount; i++) {
-        const option = document.createElement('option');
-        option.value = `odcinek-${i}`;
-        option.textContent = `Odcinek ${i}`;
-        episodeSelect.appendChild(option);
+    const selectedEpisodes = episodes[series][season || ''];
+    episodeSelect.innerHTML = ''; // Czyści poprzednie odcinki
+
+    if (selectedEpisodes) {
+        selectedEpisodes.forEach(function(episode) {
+            const option = document.createElement('option');
+            option.value = episode.toLowerCase().replace(/\s/g, '-');
+            option.textContent = episode;
+            episodeSelect.appendChild(option);
+        });
+
+        episodeContainer.style.display = 'block';
+
+        // Automatycznie wyświetl pierwszy odcinek po załadowaniu
+        if (episodeSelect.options.length > 0) {
+            episodeSelect.value = episodeSelect.options[0].value;
+            episodeSelect.dispatchEvent(new Event('change'));
+        }
+    } else {
+        episodeContainer.style.display = 'none';
     }
 
     episodeSelect.addEventListener('change', function() {
         const selectedEpisode = this.value;
-        updateVideoLinks(season, selectedEpisode);
-    });
+        videoLinks.innerHTML = ''; // Czyści poprzednie linki
 
-    episodeSelect.value = 'odcinek-1'; // Ustaw pierwszy odcinek jako domyślny
-    episodeSelect.dispatchEvent(new Event('change')); // Symuluje wybór odcinka, aby pokazać odcinek 1
-}
-
-function getEpisodesCount(season) {
-    const episodesCount = {
-        'season1': 10,
-        'season2': 10,
-        'season3': 10,
-        'season4': 10,
-        'season1-slugterra': 13,
-        'season2-slugterra': 16,
-        'season3-slugterra': 10,
-        'season4-slugterra': 13,
-        'season1-generator-rex': 20,
-        'season2-generator-rex': 20,
-        'season3-generator-rex': 20,
-        
-    };
-
-    return episodesCount[season] || 10;
-}
-
-function updateVideoLinks(season, episode) {
-    const videoLinks = document.getElementById('video-links');
-    videoLinks.innerHTML = ''; // Czyści poprzednie linki
-
-    const series = document.getElementById('video-options').value;
-    const videoUrl = getVideoUrl(series, season, episode);
-
-    if (videoUrl) {
         const link = document.createElement('a');
-        link.href = videoUrl;
-        link.textContent = `${episode.replace('-', ' ')} - Oglądaj teraz`;
-        link.target = '_blank';
+        link.href = getVideoUrl(series, season, selectedEpisode);
+        link.textContent = this.options[this.selectedIndex].text;
+        link.target = '_blank'; // Otwiera link w nowej karcie
         videoLinks.appendChild(link);
-    }
+
+        videoLinks.style.display = 'block';
+    });
 }
 
 function getVideoUrl(series, season, episode) {
@@ -298,8 +287,7 @@ function getVideoUrl(series, season, episode) {
                 'odcinek-19': 'https://www.youtube.com/watch?v=example151',
                 'odcinek-20': 'https://www.youtube.com/watch?v=example152'
             }
-        },
-        
+        }
     };
 
     return urls[series] && urls[series][season] && urls[series][season][episode] || '#';
