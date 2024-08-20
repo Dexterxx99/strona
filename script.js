@@ -819,7 +819,4 @@ function getVideoUrl(series, season, episode) {
 
     return urls[series] && urls[series][season] && urls[series][season][episode] || '#';
 }
-    };
 
-    return urls[series] && urls[series][season] && urls[series][season][episode] || '#';
-}
