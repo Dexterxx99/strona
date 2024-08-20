@@ -212,19 +212,19 @@ function getVideoUrl(series, season, episode) {
                 'odcinek-10': 'https://www.youtube.com/watch?v=JaVcGEyMikQ'
             },
             'season4': {
-                'odcinek-1': 'https://www.youtube.com/watch?v=example80',
-                'odcinek-2': 'https://www.youtube.com/watch?v=example81',
-                'odcinek-3': 'https://www.youtube.com/watch?v=example82',
-                'odcinek-4': 'https://www.youtube.com/watch?v=example83',
-                'odcinek-5': 'https://www.youtube.com/watch?v=example84',
-                'odcinek-6': 'https://www.youtube.com/watch?v=example85',
-                'odcinek-7': 'https://www.youtube.com/watch?v=example86',
-                'odcinek-8': 'https://www.youtube.com/watch?v=example87',
-                'odcinek-9': 'https://www.youtube.com/watch?v=example88',
-                'odcinek-10': 'https://www.youtube.com/watch?v=example89',
-                'odcinek-11': 'https://www.youtube.com/watch?v=example90',
-                'odcinek-12': 'https://www.youtube.com/watch?v=example91',
-                'odcinek-13': 'https://www.youtube.com/watch?v=example92'
+                'odcinek-1': 'https://www.youtube.com/watch?v=mF3KtDtU7SY',
+                'odcinek-2': 'https://www.youtube.com/watch?v=K8UPKUg9oEw',
+                'odcinek-3': 'https://www.youtube.com/watch?v=MV-o0E1GLRI',
+                'odcinek-4': 'https://www.youtube.com/watch?v=_bW_oM31aEw',
+                'odcinek-5': 'https://www.youtube.com/watch?v=xfJ5CxZPchA',
+                'odcinek-6': 'https://www.youtube.com/watch?v=S5CFBQbEQoY',
+                'odcinek-7': 'https://www.youtube.com/watch?v=NHxsgHvXh2g',
+                'odcinek-8': 'https://www.youtube.com/watch?v=icRyfOZb7-4',
+                'odcinek-9': 'https://www.youtube.com/watch?v=7OC0OYymozU',
+                'odcinek-10': 'https://www.youtube.com/watch?v=uwKUZ9KYxmg',
+                'odcinek-11': 'https://www.youtube.com/watch?v=7uC1_QghQbc',
+                'odcinek-12': 'https://www.youtube.com/watch?v=NsOEOkA9CQQ',
+                'odcinek-13': 'https://www.youtube.com/watch?v=Ws7vu_6pOR0'
             }
         },
         'generator-rex': {
