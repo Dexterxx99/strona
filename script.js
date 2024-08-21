@@ -14,13 +14,14 @@ document.getElementById('video-options').addEventListener('change', function() {
     episodeContainer.style.display = 'none';
 
     // Wypełnij sezonami odpowiedni kontener
-    if (selectedValue === 'lego-nexo-knights' || selectedValue === 'slugterra' || selectedValue === 'generator-rex' || selectedValue === 'lego-ninjago' || selectedValue === 'bakugan') {
+    if (selectedValue === 'lego-nexo-knights' || selectedValue === 'slugterra' || selectedValue === 'generator-rex' || selectedValue === 'lego-ninjago' || selectedValue === 'bakugan' || selectedValue === 'chima') {
         const seasons = {
             'lego-nexo-knights': ['Sezon 1', 'Sezon 2', 'Sezon 3', 'Sezon 4'],
             'slugterra': ['Sezon 1', 'Sezon 2', 'Sezon 3', 'Sezon 4'],
             'generator-rex': ['Sezon 1', 'Sezon 2', 'Sezon 3'],
             'lego-ninjago': ['Sezon 1','Sezon 2','Sezon 3','Sezon 4','Sezon 5','Sezon 6','Sezon 7','Sezon 8','Sezon 9','Sezon 10','Sezon 11','Sezon 12','Sezon 13','Sezon 14','Sezon 15','Sezon 16'],
-            'bakugan': ['Sezon 1','Sezon 2','Sezon 3','Sezon 4']
+            'bakugan': ['Sezon 1','Sezon 2','Sezon 3','Sezon 4'],
+            'chima': ['Sezon 1','Sezon 2','Sezon 3']
         };
 
         seasonSelect.innerHTML = ''; // Czyści poprzednie sezony
@@ -93,6 +94,11 @@ function populateEpisodes(series, season) {
             'season2': Array.from({ length:52}, (_, i) => `Odcinek ${i + 1}`),
             'season3': Array.from({ length:39}, (_, i) => `Odcinek ${i + 1}`),
             'season4': Array.from({ length:46}, (_, i) => `Odcinek ${i + 1}`),
+        },
+        'chima': {
+            'season1': Array.from({ length:20}, (_, i) => `Odcinek ${i + 1}`),
+            'season2': Array.from({ length:6}, (_, i) => `Odcinek ${i + 1}`),
+            'season3': Array.from({ length:15}, (_, i) => `Odcinek ${i + 1}`),
         }
     };
 
@@ -614,16 +620,16 @@ function getVideoUrl(series, season, episode) {
         },
         'bakugan': {
             'season1': {
-                'odcinek-1': 'https://www.youtube.com/watch?v=1Y_1RMOTasY',
-                'odcinek-2': 'https://www.youtube.com/watch?v=BIpbrhDkcao',
-                'odcinek-3': 'https://www.youtube.com/watch?v=RRqLDrQ-lF8',
-                'odcinek-4': 'https://www.youtube.com/watch?v=p_AH-9NaFlo',
-                'odcinek-5': 'https://www.youtube.com/watch?v=Ms6mjcQhlXY',
-                'odcinek-6': 'https://www.youtube.com/watch?v=BSndb4b5c8s',
-                'odcinek-7': 'https://www.youtube.com/watch?v=F66u_jW8VbY',
-                'odcinek-8': 'https://www.youtube.com/watch?v=3tScqBtuPoU',
-                'odcinek-9': 'https://www.youtube.com/watch?v=qLLCCDtJ-Y0',
-                'odcinek-10': 'https://www.youtube.com/watch?v=rv1uXxQuWss',
+                'odcinek-1': 'https://www.youtube.com/watch?v=GbpGytJ9nCA',
+                'odcinek-2': 'https://www.youtube.com/watch?v=F6kaVFHPT6w',
+                'odcinek-3': 'https://www.youtube.com/watch?v=64ba0-qNTXY',
+                'odcinek-4': 'https://www.youtube.com/watch?v=9jxFIjpK0qA',
+                'odcinek-5': 'https://www.youtube.com/watch?v=I4nyFObTGt0',
+                'odcinek-6': 'https://www.youtube.com/watch?v=7Vr7ZVlkqgg',
+                'odcinek-7': 'https://www.youtube.com/watch?v=ot92VHoq_k8',
+                'odcinek-8': 'https://www.youtube.com/watch?v=ZSqdPU6eQhQ',
+                'odcinek-9': 'https://www.youtube.com/watch?v=QVpbIbKgu14',
+                'odcinek-10': 'https://www.youtube.com/watch?v=yYhr4yuTX5M',
                 'odcinek-11': 'https://www.youtube.com/watch?v=GbpGytJ9nCA',
                 'odcinek-12': 'https://www.youtube.com/watch?v=F6kaVFHPT6w',
                 'odcinek-13': 'https://www.youtube.com/watch?v=64ba0-qNTXY',
@@ -813,10 +819,60 @@ function getVideoUrl(series, season, episode) {
                 'odcinek-46': 'https://www.youtube.com/watch?v=7Vr7ZVlkqgg'
                
             }
+        },
+        'chima': {
+            'season1': {
+                'odcinek-1': 'https://www.youtube.com/watch?v=BY5FnnDI6yg',
+                'odcinek-2': 'https://www.youtube.com/watch?v=MCg_5_iEcBg',
+                'odcinek-3': 'https://www.youtube.com/watch?v=lrzCW2sVflw',
+                'odcinek-4': 'https://www.youtube.com/watch?v=qTz_thmkWpc',
+                'odcinek-5': 'https://www.youtube.com/watch?v=zIMCGMUTrHA',
+                'odcinek-6': 'https://www.youtube.com/watch?v=0D4elyANYb0',
+                'odcinek-7': 'https://www.youtube.com/watch?v=GFwQapWdGDg',
+                'odcinek-8': 'https://www.youtube.com/watch?v=Udb783n54NQ',
+                'odcinek-9': 'https://www.youtube.com/watch?v=7cic9zaSViY',
+                'odcinek-10': 'https://www.youtube.com/watch?v=7J5kWkSUz-s',
+                'odcinek-11': 'https://www.youtube.com/watch?v=6WdK53WP5gk',
+                'odcinek-12': 'https://www.youtube.com/watch?v=cUnyPwJpKn4',
+                'odcinek-13': 'https://www.youtube.com/watch?v=TBJm3yK0zeA',
+                'odcinek-14': 'https://www.youtube.com/watch?v=FY5QzSYjrsk',
+                'odcinek-15': 'https://www.youtube.com/watch?v=gSo8ddBRwtQ',
+                'odcinek-16': 'https://www.youtube.com/watch?v=2YeuNfOk8bE',
+                'odcinek-17': 'https://www.youtube.com/watch?v=tcUmixy4PLM',
+                'odcinek-18': 'https://www.youtube.com/watch?v=TZ2-Mhunv6k',
+                'odcinek-19': 'https://www.youtube.com/watch?v=9rx-r3eDIII',
+                'odcinek-20': 'https://www.youtube.com/watch?v=dkjzMYWmQiM'
+            },
+            'season2': {
+                'odcinek-1': 'https://www.youtube.com/watch?v=3o2NyRPYQk8',
+                'odcinek-2': 'https://www.youtube.com/watch?v=v7EAtl7mvOE',
+                'odcinek-3': 'https://www.youtube.com/watch?v=2ycTBUUpeAM',
+                'odcinek-4': 'https://www.youtube.com/watch?v=9gu_CNGqPnc',
+                'odcinek-5': 'https://www.youtube.com/watch?v=-BE6IjQ5EgU',
+                'odcinek-6': 'https://www.youtube.com/watch?v=OoHMKOihIX8'
+                
+            },
+            'season3': {
+                'odcinek-1': 'https://www.youtube.com/watch?v=hW9g4fE81sE',
+                'odcinek-2': 'https://www.youtube.com/watch?v=k3jZxhbcRtE',
+                'odcinek-3': 'https://www.youtube.com/watch?v=NjdfW1-g2HU',
+                'odcinek-4': 'https://www.youtube.com/watch?v=rsd7HHaYs4c',
+                'odcinek-5': 'https://www.youtube.com/watch?v=-JlJHrXBzGg',
+                'odcinek-6': 'https://www.youtube.com/watch?v=RVSzpAMHDxY',
+                'odcinek-7': 'https://www.youtube.com/watch?v=ALTaZ_XdLCU',
+                'odcinek-8': 'https://www.youtube.com/watch?v=QU_ef0oKbSA',
+                'odcinek-9': 'https://www.youtube.com/watch?v=Hf7HBogVAPw',
+                'odcinek-10': 'https://www.youtube.com/watch?v=1LkAOJlX2Bg',
+                'odcinek-11': 'https://www.youtube.com/watch?v=zXJcQN30MB4',
+                'odcinek-12': 'https://www.youtube.com/watch?v=3VBVX7_d8e8',
+                'odcinek-13': 'https://www.youtube.com/watch?v=ay_bX7G-dYc',
+                'odcinek-14': 'https://www.youtube.com/watch?v=AFYgvKZrXfs',
+                'odcinek-15': 'https://www.youtube.com/watch?v=9MQcbJV0yeI'
+                
+            }
         }
 
     };
 
     return urls[series] && urls[series][season] && urls[series][season][episode] || '#';
 }
-
