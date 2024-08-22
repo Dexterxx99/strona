@@ -176,9 +176,9 @@ function getVideoUrl(series, season, episode) {
     const urls = {
         'lego-nexo-knights': {
             'season1': {
-                'odcinek-1': 'https://www.youtube.com/watch?v=GbpGytJ9nCA',
-                'odcinek-2': 'https://www.youtube.com/watch?v=F6kaVFHPT6w',
-                'odcinek-3': 'https://www.youtube.com/watch?v=64ba0-qNTXY',
+                'odcinek-1': 'https://drive.google.com/file/d/1e7rkIlS6Z6xmCCGZUPUes3CdBKxZMpO7/view',
+                'odcinek-2': 'https://drive.google.com/file/d/1RpcQTQJV1pkDbjuYKyD0Enx9ZEcKsPmQ/view',
+                'odcinek-3': 'https://drive.google.com/file/d/1ZBV-aZSTUvDkSy4OtJ-w9eGwGAqoZ2i2/view',
                 'odcinek-4': 'https://www.youtube.com/watch?v=9jxFIjpK0qA',
                 'odcinek-5': 'https://www.youtube.com/watch?v=I4nyFObTGt0',
                 'odcinek-6': 'https://www.youtube.com/watch?v=7Vr7ZVlkqgg',
