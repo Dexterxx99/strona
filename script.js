@@ -903,3 +903,26 @@ function getVideoUrl(series, season, episode) {
 
     return urls[series] && urls[series][season] && urls[series][season][episode] || '#';
 }
+// Konfiguracja celu i aktualnej kwoty
+const fundraisingGoal = 53; // Ustaw tutaj docelową kwotę
+let fundraisingAmount = 0.77; // Ustaw tutaj zebrane środki
+
+// Inicjalizacja licznika
+function updateFundraisingDisplay() {
+    const goalElement = document.getElementById('fundraising-goal');
+    const amountElement = document.getElementById('fundraising-amount');
+    const totalElement = document.getElementById('fundraising-total');
+    const progressBar = document.getElementById('progress-bar');
+
+    goalElement.textContent = fundraisingGoal + " PLN";
+    amountElement.textContent = fundraisingAmount + " PLN";
+    totalElement.textContent = fundraisingGoal + " PLN";
+
+    // Obliczanie postępu
+    const progressPercentage = (fundraisingAmount / fundraisingGoal) * 100;
+    progressBar.style.width = progressPercentage + "%";
+}
+
+// Wywołanie funkcji na starcie
+updateFundraisingDisplay();
+
