@@ -14,14 +14,15 @@ document.getElementById('video-options').addEventListener('change', function() {
     episodeContainer.style.display = 'none';
 
     // Wypełnij sezonami odpowiedni kontener
-    if (['lego-nexo-knights', 'slugterra', 'generator-rex', 'lego-ninjago', 'bakugan', 'chima'].includes(selectedValue)) {
+    if (['lego-nexo-knights', 'slugterra', 'generator-rex', 'lego-ninjago', 'bakugan', 'chima','danny'].includes(selectedValue)) {
         const seasons = {
             'lego-nexo-knights': ['Sezon 1', 'Sezon 2', 'Sezon 3', 'Sezon 4'],
             'slugterra': ['Sezon 1', 'Sezon 2', 'Sezon 3', 'Sezon 4'],
             'generator-rex': ['Sezon 1', 'Sezon 2', 'Sezon 3'],
             'lego-ninjago': ['Sezon 1','Sezon 2','Sezon 3','Sezon 4','Sezon 5','Sezon 6','Sezon 7','Sezon 8','Sezon 9','Sezon 10','Sezon 11','Sezon 12','Sezon 13','Sezon 14','Sezon 15','Sezon 16'],
             'bakugan': ['Sezon 1','Sezon 2','Sezon 3','Sezon 4'],
-            'chima': ['Sezon 1','Sezon 2','Sezon 3']
+            'chima': ['Sezon 1','Sezon 2','Sezon 3'],
+            'danny': ['Sezon 1','Sezon 2','Sezon 3']
         };
 
         seasonSelect.innerHTML = ''; // Czyści poprzednie sezony
@@ -99,6 +100,11 @@ function populateEpisodes(series, season) {
             'season1': Array.from({ length:20}, (_, i) => `Odcinek ${i + 1}`),
             'season2': Array.from({ length:6}, (_, i) => `Odcinek ${i + 1}`),
             'season3': Array.from({ length:15}, (_, i) => `Odcinek ${i + 1}`),
+        },
+        'danny': {
+            'season1': Array.from({ length:20}, (_, i) => `Odcinek ${i + 1}`),
+            'season2': Array.from({ length:18}, (_, i) => `Odcinek ${i + 1}`),
+            'season3': Array.from({ length:7}, (_, i) => `Odcinek ${i + 1}`),
         }
     };
 
@@ -897,6 +903,61 @@ function getVideoUrl(series, season, episode) {
                 'odcinek-15': 'https://drive.google.com/file/d/1Cv9OhM0kAAxDxdKwdNau-_-g3znBCjMS/view'
                 
             }
+        },
+        'danny': {
+            'season1': {
+                'odcinek-1': 'https://drive.google.com/file/d/1_sY8HmbSSfM8q3HPkwVfh9C8x9G8sqMD/view',
+                'odcinek-2': 'https://drive.google.com/file/d/1gDUtw33J1PYJI_lTeckh6Dk1-dtYDP5c/view',
+                'odcinek-3': 'https://drive.google.com/file/d/1r8zNUzYJCKPhQPSo8ceC-YTDtVSRu8QV/view',
+                'odcinek-4': 'https://drive.google.com/file/d/1_hcgncIi4thlA6UneygZGcNdGlobCy0F/view',
+                'odcinek-5': 'https://drive.google.com/file/d/1LcsvlYE3SLKFGCEG9fceSn2Q6ocLdbd4/view',
+                'odcinek-6': 'https://drive.google.com/file/d/1FFQJI3gZb_VK-jIG0UkbfhJM027zZRF3/view',
+                'odcinek-7': 'https://drive.google.com/file/d/1hH2WHtph22V2VPuth95VSX7YTFUDog0t/view',
+                'odcinek-8': 'https://drive.google.com/file/d/1_W6JPliQm2p1tjY33pceS8M0zVRY6LZg/view',
+                'odcinek-9': 'https://drive.google.com/file/d/1A047PntFJcJ9yUD_Y2cbiNDaDQnu3evL/view',
+                'odcinek-10': 'https://drive.google.com/file/d/10YVqCRIu_LnTIH9OL6fdsVp1j4LL3O6C/view',
+                'odcinek-11': 'https://drive.google.com/file/d/19El2RVY6wKZizt-tRBVkmQ-uAb9UP-Zc/view',
+                'odcinek-12': 'https://drive.google.com/file/d/1vhA78O4DflJB2fdJUXSCQWfZz5wNnTfl/view',
+                'odcinek-13': 'https://drive.google.com/file/d/114fPOL5Cn9iDZumoWsCvd42WWteVHebS/view',
+                'odcinek-14': 'https://drive.google.com/file/d/1UZiNrwYmMdRstr7-ATg2aDgb8Vz7qa1T/view',
+                'odcinek-15': 'https://drive.google.com/file/d/1xE2mbsBr59qGJctxRYtZug2d2B4Xhcrh/view',
+                'odcinek-16': 'https://drive.google.com/file/d/17oVTpDiLM8Kw5FvnckfqUyhE_JBHZVVU/view',
+                'odcinek-17': 'https://drive.google.com/file/d/1k8Sq0L6MOD1evKkiuXDvNH5G4ndv5jmk/view',
+                'odcinek-18': 'https://drive.google.com/file/d/1HJuyfuXcEryX7X5qhb5seYI0I8-_P_sY/view',
+                'odcinek-19': 'https://drive.google.com/file/d/1qhN3qQXE7g7kY0_01hMsXBjHQsLDuKLr/view',
+                'odcinek-20': 'https://drive.google.com/file/d/1JNE65DTK5Xi3nGY5FyvZJxwWarcHCPHP/view'
+            },
+            'season2': {
+                'odcinek-1': 'https://drive.google.com/file/d/1nWNcfSyztxjSOPhp8xfeSxTYitg-19jC/view',
+                'odcinek-2': 'https://drive.google.com/file/d/1Mk5GS3GRs47BjmaGvVsH-1CA7wYkQeOP/view',
+                'odcinek-3': 'https://drive.google.com/file/d/1WhKziV-RHRYtnc_KSHwQaBpAH8h3GfON/view',
+                'odcinek-4': 'https://drive.google.com/file/d/1mnEw6_PwBgS_8oEshjUruxkD0GaauCcC/view',
+                'odcinek-5': 'https://drive.google.com/file/d/1AW_jBxW2dtReuOX_rBoco52nO1OwQGua/view',
+                'odcinek-6': 'https://drive.google.com/file/d/10yYtANMj5ac11e_xJxyfgE_MdVDSFO5q/view',
+                'odcinek-7': 'https://drive.google.com/file/d/1-bq04zwzqio5cEC8bua_ILkb53_NTJWF/view',
+                'odcinek-8': 'https://drive.google.com/file/d/1Ztmxw4X3TCO-NjDgQF6SW-uVRrega8Nb/view',
+                'odcinek-9': 'https://drive.google.com/file/d/1-WuhDipNl5Hl_JEK3nvzlFQUPk1xA6nu/view',
+                'odcinek-10': 'https://drive.google.com/file/d/19Ol5Hcxvd6VAk0zJGTZU6ZmJ8mmysnKK/view',
+                'odcinek-11': 'https://drive.google.com/file/d/1WX540uaa0WYyhxBfiJvnFpBOdBm68Hql/view',
+                'odcinek-12': 'https://drive.google.com/file/d/13JaNaMm4UIS02dZyZFZc2WnK0Qs4DcfP/view',
+                'odcinek-13': 'https://drive.google.com/file/d/1_UwfvtqsBBYb006pU_3E_-XsTS-4lNDs/view',
+                'odcinek-14': 'https://drive.google.com/file/d/1RsoZu9KbC8dkKfVV6Cb5vtuHrNjHbQUw/view',
+                'odcinek-15': 'https://drive.google.com/file/d/1R8SwX0J1az0ulT7FX4Hih0KNVXhOHWMh/view',
+                'odcinek-16': 'https://drive.google.com/file/d/1fz0mGE0B_OVhvChF0FlC3l5IMawFf1qe/view',
+                'odcinek-17': 'https://drive.google.com/file/d/1xjIZxcVdZd-iVpmzBn2n-h02_snWR4q0/view',
+                'odcinek-18': 'https://drive.google.com/file/d/1Bv-8pJADJ9mUnmYm2lpsfBeZRVYEkpCQ/view'
+                
+            },
+            'season3': {
+                'odcinek-1': 'https://drive.google.com/file/d/1Teko84WP1Mg4U7X6-k921_zZcegdjZz3/view',
+                'odcinek-2': 'https://drive.google.com/file/d/1JZkfEwcIwiZrJCazvoIlIT-V4hg9qN5B/view',
+                'odcinek-3': 'https://drive.google.com/file/d/1x9jfBK5_TcyBftg1wp5aHYkjuTwKu5LH/view',
+                'odcinek-4': 'https://drive.google.com/file/d/1-J4yR4-S9cD1eI8C4o3z8DYcJ2YG4Ajy/view',
+                'odcinek-5': 'https://drive.google.com/file/d/11rmi8CFXFmrOk4dBcFmMBRbw9QLhvSZ3/view',
+                'odcinek-6': 'https://drive.google.com/file/d/16UNLrMDVsd3lNu-T1wPt3sJ9O-iJnSe-/view',
+                'odcinek-7': 'https://drive.google.com/file/d/12E5JhBMM1j5pfy1YdpgtXoqoADxCCoXC/view'
+                
+            }
         }
 
     };
@@ -925,4 +986,3 @@ function updateFundraisingDisplay() {
 
 // Wywołanie funkcji na starcie
 updateFundraisingDisplay();
-
