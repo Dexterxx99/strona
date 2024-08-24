@@ -480,10 +480,10 @@ function getVideoUrl(series, season, episode) {
                 'odcinek-10': 'https://www.youtube.com/watch?v=WOPz3DRqiMs',    
             },
             'season10': {
-                'odcinek-1': 'https://www.youtube.com/watch?v=WOPz3DRqiMs',
-                'odcinek-2': 'https://www.youtube.com/watch?v=WOPz3DRqiMs',
-                'odcinek-3': 'https://www.youtube.com/watch?v=WOPz3DRqiMs',
-                'odcinek-4': 'https://www.youtube.com/watch?v=WOPz3DRqiMs',    
+                'odcinek-1': 'https://drive.google.com/file/d/1Yen6GJJFqA6iP5xnHOCYsiug6EoBOGVW/view',
+                'odcinek-2': 'https://drive.google.com/file/d/1Z2nnN1i3skGADdBZodsPu3a2E1tWIZob/view',
+                'odcinek-3': 'https://drive.google.com/file/d/1EJ5oiLZjrShITxCOsLdBgTGbVO90iqlO/view',
+                'odcinek-4': 'https://drive.google.com/file/d/1yoSICG0jKRfrazirVz_il69kBr5Gm7Xt/view',    
             },
             'season11': {
                 'odcinek-1': 'https://www.youtube.com/watch?v=WOPz3DRqiMs',
