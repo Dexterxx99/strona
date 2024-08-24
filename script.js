@@ -14,7 +14,7 @@ document.getElementById('video-options').addEventListener('change', function() {
     episodeContainer.style.display = 'none';
 
     // Wypełnij sezonami odpowiedni kontener
-    if (['lego-nexo-knights', 'slugterra', 'generator-rex', 'lego-ninjago', 'bakugan', 'chima','danny'].includes(selectedValue)) {
+    if (['lego-nexo-knights', 'slugterra', 'generator-rex', 'lego-ninjago', 'bakugan', 'chima','danny','edd'].includes(selectedValue)) {
         const seasons = {
             'lego-nexo-knights': ['Sezon 1', 'Sezon 2', 'Sezon 3', 'Sezon 4'],
             'slugterra': ['Sezon 1', 'Sezon 2', 'Sezon 3', 'Sezon 4'],
@@ -22,7 +22,8 @@ document.getElementById('video-options').addEventListener('change', function() {
             'lego-ninjago': ['Sezon 1','Sezon 2','Sezon 3','Sezon 4','Sezon 5','Sezon 6','Sezon 7','Sezon 8','Sezon 9','Sezon 10','Sezon 11','Sezon 12','Sezon 13','Sezon 14','Sezon 15','Sezon 16'],
             'bakugan': ['Sezon 1','Sezon 2','Sezon 3','Sezon 4'],
             'chima': ['Sezon 1','Sezon 2','Sezon 3'],
-            'danny': ['Sezon 1','Sezon 2','Sezon 3']
+            'danny': ['Sezon 1','Sezon 2','Sezon 3'],
+            'edd': ['Film 1']
         };
 
         seasonSelect.innerHTML = ''; // Czyści poprzednie sezony
@@ -105,6 +106,9 @@ function populateEpisodes(series, season) {
             'season1': Array.from({ length:20}, (_, i) => `Odcinek ${i + 1}`),
             'season2': Array.from({ length:18}, (_, i) => `Odcinek ${i + 1}`),
             'season3': Array.from({ length:7}, (_, i) => `Odcinek ${i + 1}`),
+        },
+        'edd': {
+            'season1': Array.from({ length:1}, (_, i) => `Odcinek ${i + 1}`)
         }
     };
 
@@ -957,6 +961,11 @@ function getVideoUrl(series, season, episode) {
                 'odcinek-6': 'https://drive.google.com/file/d/16UNLrMDVsd3lNu-T1wPt3sJ9O-iJnSe-/view',
                 'odcinek-7': 'https://drive.google.com/file/d/12E5JhBMM1j5pfy1YdpgtXoqoADxCCoXC/view'
                 
+            }
+        },
+        'edd': {
+            'season1':{
+                'odcinek-1': 'https://drive.google.com/file/d/1Y5Z8Q-7YQKnHVodPNeZfwkmlX503X1xN/view?usp=sharing'
             }
         }
 
