@@ -14,7 +14,7 @@ document.getElementById('video-options').addEventListener('change', function() {
     episodeContainer.style.display = 'none';
 
     // Wypełnij sezonami odpowiedni kontener
-    if (['lego-nexo-knights', 'slugterra', 'generator-rex', 'lego-ninjago', 'bakugan', 'chima','danny','edd'].includes(selectedValue)) {
+    if (['lego-nexo-knights', 'slugterra', 'generator-rex', 'lego-ninjago', 'bakugan', 'chima','danny','edd','redakai'].includes(selectedValue)) {
         const seasons = {
             'lego-nexo-knights': ['Sezon 1', 'Sezon 2', 'Sezon 3', 'Sezon 4'],
             'slugterra': ['Sezon 1', 'Sezon 2', 'Sezon 3', 'Sezon 4'],
@@ -23,7 +23,8 @@ document.getElementById('video-options').addEventListener('change', function() {
             'bakugan': ['Sezon 1','Sezon 2','Sezon 3','Sezon 4'],
             'chima': ['Sezon 1','Sezon 2','Sezon 3'],
             'danny': ['Sezon 1','Sezon 2','Sezon 3'],
-            'edd': ['Film 1']
+            'edd': ['Film 1'],
+            'redakai': ['Sezon 1','Sezon 2']
         };
 
         seasonSelect.innerHTML = ''; // Czyści poprzednie sezony
@@ -109,7 +110,13 @@ function populateEpisodes(series, season) {
         },
         'edd': {
             'season1': Array.from({ length:1}, (_, i) => `Odcinek ${i + 1}`)
+        },
+        'redakai': {
+            'season1': Array.from({ length:26}, (_, i) => `Odcinek ${i + 1}`),
+            'season2': Array.from({ length:26}, (_, i) => `Odcinek ${i + 1}`)
+           
         }
+
     };
 
     const selectedEpisodes = episodes[series][season || ''];
@@ -178,7 +185,6 @@ function updateNavigationButtons(episodeSelect) {
         }
     };
 }
-
 
 
 function getVideoUrl(series, season, episode) {
